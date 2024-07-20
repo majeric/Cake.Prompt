@@ -1,18 +1,20 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;netcoreapp3.1;net5.0;net6.0</TargetFrameworks>
+    <TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
 	<IsPackable>true</IsPackable>
     <LangVersion>latest</LangVersion>
     <Description>Cake Prompt AddIn</Description>
     <Copyright>Copyright © Yves Schmid 2017</Copyright>
     <Company />
     <PackageTags>cake</PackageTags>
-    <PackageProjectUrl>https://github.com/cake-contrib/Cake.Prompt</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/majeric/Cake.Prompt</PackageProjectUrl>
+    <Version>1.0.1</Version>
+    <Authors>Yves Schmid, Jeremy Denton (additional)</Authors>
+    <PackageLicenseUrl>https://github.com/majeric/Cake.Prompt/blob/main/LICENSE</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/majeric/Cake.Prompt</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
   </PropertyGroup>
-  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
-    <PackageReference Include="Cake.Core" Version="1.0.0" PrivateAssets="All" />
+  <ItemGroup>
+    <PackageReference Include="Cake.Core" Version="4.0.0" />
   </ItemGroup>
-	<ItemGroup Condition=" '$(TargetFramework)' != 'netstandard2.0' ">
-		<PackageReference Include="Cake.Core" Version="2.0.0" PrivateAssets="All" />
-	</ItemGroup>
 </Project>
